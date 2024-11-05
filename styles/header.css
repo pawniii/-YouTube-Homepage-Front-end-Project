@@ -1,0 +1,203 @@
+.header{
+    height: 70x;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    padding: 5px 5px;
+    top:0;
+    left:0;
+    right:0;
+    background: white;
+    z-index: 10;
+}
+.left{
+    display: flex;
+    align-items: center;
+} 
+.menu{
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+.yt-logo{
+    height: 28px;
+}
+
+
+.middle{
+    flex:1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+
+}
+.searchbox{
+    flex:1;
+    width: 0;
+    max-width: 100%;
+    height: 31px;
+    border: 1px solid rgb(194, 194, 194);
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: inset 1px 2px 3px rgba(0,0,0, .09) ;  /*shadows inside the box*/
+}
+.searchbox::placeholder{
+    font-size: 14px;
+    font-family:roboto, arial;
+    padding-left: 12px;
+}
+
+
+
+.search-button{
+    height:35px;
+    width:50px;
+    background: rgb(242, 240, 240);
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 0px 20px 20px 0px;
+    margin-left: -1px;
+    border-bottom:1px solid rgb(194, 194, 194);
+    position: relative;
+    cursor: pointer;
+}
+.search-button img{
+    height: 24px;
+    padding-top:3px;
+    padding-right: 3px;
+}
+
+
+.search-button .tool-tip-icon{
+    position: absolute;
+    font-family: roboto, arial;
+    font-size: 12px;
+    background-color: gray;
+    color:white;
+    padding: 4px 4px 4px 4px;
+    border-radius: 2px;
+    bottom:-45px;
+    left:-3px;
+    opacity: 0;   /*makes it invisible*/
+    transition: opacity .15s;
+    pointer-events: none;   /* this ensures that the tool tip shows only when we hover over the icon and not when we hover over the actual tool tip*/
+}
+.search-button:hover .tool-tip-icon{  /*targets particular element while hovering*/
+    opacity: 1;
+}
+
+.voice-button{
+    position: relative; /*to add tool-kit absolutely*/
+    height:35px;
+    width: 35px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(242, 240, 240);
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.voice-button img{
+    height: 20px;
+}
+.voice-button .tool-tip-icon{
+    position: absolute;
+    font-family: roboto, arial;
+    font-size: 12px;
+    white-space:nowrap;
+    background-color: gray;
+    color:white;
+    padding: 4px 4px 4px 4px;
+    border-radius: 2px;
+    bottom:-44px;
+    left:-52px;
+    opacity: 0;   /*makes it invisible*/
+    transition: opacity .15s;
+    pointer-events: none;   /* this ensures that the tool tip shows only when we hover over the icon and not when we hover over the actual tool tip*/
+}
+.voice-button:hover .tool-tip-icon{  /*targets particular element while hovering*/
+    opacity: 1;
+}
+
+
+.right{
+    display: flex;
+    align-items: center;
+    width: 220px; 
+    justify-content:space-between;
+    flex-shrink: 0;
+}
+.apps img, .bell img, .create img{
+    height: 20px;
+    background: white;
+    padding-right: 0;
+    border: none;
+}
+.create, .apps, .bell{
+    position: relative; /*to add tool-kit absolutely*/
+    height:35px;
+    width: 35px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(255, 255, 255);
+    margin-right: 10px;
+    cursor: pointer;
+}
+.create:hover , .apps:hover, bell:hover{
+    background: rgb(223, 223, 223);
+}
+.create .tool-tip-icon, .apps .tool-tip-icon, .bell .tool-tip-icon{
+    position: absolute;
+    font-family: roboto, arial;
+    font-size: 12px;
+    white-space:nowrap;
+    background-color: gray;
+    color:white;
+    padding: 4px 4px 4px 4px;
+    border-radius: 2px;
+    bottom:-44px;
+    left:-5px;
+    opacity: 0;   /*makes it invisible*/
+    transition: opacity .15s;
+    pointer-events: none;   /* this ensures that the tool tip shows only when we hover over the icon and not when we hover over the actual tool tip*/
+}
+.bell .tool-tip-icon{
+    left:-15px;
+}
+.create:hover .tool-tip-icon, .apps:hover .tool-tip-icon, .bell:hover .tool-tip-icon{  /*targets particular element while hovering*/
+    opacity: 1;
+}
+
+.account-pfp{
+    height: 30px;
+    width:30px;
+    object-fit: cover;
+    border:none;
+    border-radius: 20px;
+    margin-right: 15px;
+    margin-bottom: 2px;
+}
+
+.notification-container{
+    position: relative;
+}
+.notification{
+    font-family: roboto, arial;
+    font-size: 12px;
+    position: absolute;
+    color:white;
+    background-color: rgb(221, 0, 0);
+    height: 15px;
+    width: 15px;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 10px;
+    top:-1px;
+    right:-8px;
+}
+
+
+

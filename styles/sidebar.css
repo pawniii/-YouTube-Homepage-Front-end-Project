@@ -1,0 +1,38 @@
+.scroll{
+    width:260px;
+    height: 3vh;
+    overflow-y: auto; /* allow scrolling inside the sidebar */
+    
+}
+.sidebar{
+    left:0;
+    bottom: 0;
+    top:47px; /*leaving space for header*/
+    background: white;
+    position: fixed;
+    width:70px;
+    height: 5vh;
+    z-index: 20; /*value greater than header to stay on top*/
+}
+
+.sidebar-icons{
+    display: flex;
+    flex-direction: column;   /*sets icon and text in vertical layout*/
+    justify-content: center;  /*aligns horizontally*/
+    align-items: center;      /*aligns vertically*/
+    height: 65px;
+    padding-top: 5px;
+    cursor: pointer;
+    background: white;
+}
+.sidebar-icons:hover{
+    background-color: rgb(227, 224, 224);
+}
+.sidebar-icons img{
+    height: 16px;
+    margin-bottom: 4px;
+}
+.sidebar-icons div{
+    font-family: roboto, arial;
+    font-size: 10px;
+}
